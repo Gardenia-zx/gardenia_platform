@@ -1,14 +1,14 @@
-# Gardenia Platform｜知光平台
+# Gardenia Platform｜Gardenia 平台
 
-Gardenia Platform（知光平台）是一个面向知识获取、知识分享与智能问答的社区型平台。项目围绕“内容发布、知识沉淀、用户互动、搜索发现、AI 摘要、RAG 知识问答”等能力展开，目标是构建一个兼具社区属性和 AI 辅助学习能力的知识平台。
+Gardenia Platform（Gardenia 平台）是一个面向知识获取、知识分享与智能问答的社区型平台。项目围绕“内容发布、知识沉淀、用户互动、搜索发现、AI 摘要、RAG 知识问答”等能力展开，目标是构建一个兼具社区属性和 AI 辅助学习能力的知识平台。
 
-本仓库用于展示知光平台的整体项目说明、系统设计、技术栈、核心模块和后续规划。
+本仓库用于展示 Gardenia 平台的整体项目说明、系统设计、技术栈、核心模块和后续规划。
 
 ---
 
 ## 1. 项目简介
 
-知光平台定位为知识获取与分享社区，用户可以在平台中发布文章、学习笔记、Markdown 文档、多媒体内容，也可以进行点赞、收藏、关注、搜索、评论等互动。平台在传统知识社区能力的基础上，引入 AI 能力，支持文章摘要生成、围绕文章的 RAG 智能问答、内容搜索与知识检索等功能。
+Gardenia 平台定位为知识获取与分享社区，用户可以在平台中发布文章、学习笔记、Markdown 文档、多媒体内容，也可以进行点赞、收藏、关注、搜索、评论等互动。平台在传统知识社区能力的基础上，引入 AI 能力，支持文章摘要生成、围绕文章的 RAG 智能问答、内容搜索与知识检索等功能。
 
 项目重点不是简单 CRUD，而是围绕真实后端系统设计中的高并发、高可用、最终一致性、缓存治理、消息异步化、搜索体验和 AI 工程化能力进行完整设计。
 
@@ -404,7 +404,7 @@ Embedding
 
 ```text
 gardenia_platform/
-  backend/ 或 zhiguang_be/
+  backend/
     src/main/java/
       config/                 # 配置类
       controller/             # 接口层
@@ -421,7 +421,7 @@ gardenia_platform/
       ai/                     # AI 摘要、RAG、Embedding
       common/                 # 通用响应、异常、工具类
 
-  frontend/ 或 zhiguang_fe/
+  frontend/
     src/
       pages/
       components/
@@ -464,18 +464,7 @@ cd gardenia_platform
 
 ### 7.3 后端启动示例
 
-如果后端项目在当前仓库中：
-
 ```bash
-mvn clean install
-mvn spring-boot:run
-```
-
-如果后端在独立仓库 `zhiguang_be`：
-
-```bash
-git clone https://github.com/Gardenia-zx/zhiguang_be.git
-cd zhiguang_be
 mvn clean install
 mvn spring-boot:run
 ```
@@ -484,18 +473,7 @@ mvn spring-boot:run
 
 ### 7.4 前端启动示例
 
-如果前端在当前仓库中：
-
 ```bash
-npm install
-npm run dev
-```
-
-如果前端在独立仓库：
-
-```bash
-git clone https://github.com/Gardenia-zx/zhiguang_fe.git
-cd zhiguang_fe
 npm install
 npm run dev
 ```
@@ -806,6 +784,6 @@ JWT 私钥
 
 ## 16. 项目总结
 
-Gardenia Platform / 知光平台是一个综合性的知识社区项目，覆盖认证、内容、互动、关系、Feed、搜索、AI 摘要和 RAG 问答等模块。项目在设计上重点关注高并发系统设计、缓存一致性、异步解耦、最终一致性、搜索系统和 AI 工程化落地。
+Gardenia Platform 是一个综合性的知识社区项目，覆盖认证、内容、互动、关系、Feed、搜索、AI 摘要和 RAG 问答等模块。项目在设计上重点关注高并发系统设计、缓存一致性、异步解耦、最终一致性、搜索系统和 AI 工程化落地。
 
 该项目适合作为 Java 后端综合实践项目，也适合作为面试中展示系统设计、缓存设计、消息队列、搜索系统、RAG 和 AI 应用工程化能力的核心项目。
